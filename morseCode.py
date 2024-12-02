@@ -19,6 +19,8 @@ def main():
 def translate(morse):
     
     #letters of the alphabet
+    #A = 65, B = 66, C = 67. . . 
+    offset = 65
     alphabet = ['. -', '- . . .', '- . - .', '- . .', '.', '. . - .', '- - .',
              '. . . .', '. .', '. - - -', '- . -', '. - . .', '- -', '- .', '- - -',
              '. - - .', '- - . -', '. - .', '. . .', '-', '. . -', '. . . -', '. - -',
@@ -47,7 +49,7 @@ def translate(morse):
             #check if alphabetical
             try:
                 index = alphabet.index(segment)
-                print(chr(index + 65), end = '')
+                print(chr(index + offset), end = '')
             except:
 
                 #check if numeric
@@ -69,5 +71,4 @@ def translate(morse):
 
 
 main()
-
 
